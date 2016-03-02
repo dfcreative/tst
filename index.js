@@ -128,6 +128,10 @@ function test (message, fn, only) {
         }
     }
 
+    //clean title
+    testObj.title = testObj.title.trim();
+    testObj.name = testObj.title;
+
     //detect async as at least one function argument
     //NOTE: tests returning promise will set async flag here
     if (testObj.async == null) {
