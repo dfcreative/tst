@@ -1,15 +1,11 @@
-var test = require('./')//.only();
+var test = require('./eval')//.only();
 var assert = require('assert');
 // var test = it;
 
 test('Successful test', function() {
     assert.ok(true);
-}).after(function () {
-	console.log('After callback');
 }).on('after', function () {
 	console.log('After event')
-}).before(function () {
-	console.log('Before callback');
 }).on('before', function () {
 	console.log('Before event')
 }).on('success', function () {
